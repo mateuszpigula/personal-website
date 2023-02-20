@@ -42,8 +42,8 @@ export default function Index() {
         <li>✅ Chapter Lead</li>
       </ul>
 
-      <p>If you are looking for experienced developer:</p>
       <p>
+        If you are looking for experienced developer <br />
         feel free to reach me out{" "}
         <a
           href="mailto:contact@mateuszpigula.dev?subject=Found your personal website"
