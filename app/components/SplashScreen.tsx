@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { SplashText } from "./SplashText";
 
-export const INTRO_DURATION = 3.5; //in seconds
+export const INTRO_DURATION = 4; //in seconds
 
 export const SplashScreen = () => {
   const [hidden, setHidden] = useState(false);
@@ -10,14 +10,14 @@ export const SplashScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setHidden(true);
-    }, INTRO_DURATION * 1000);
+    }, (INTRO_DURATION - 0.5) * 1000);
   });
 
   return (
     <div
       id="splash-screen"
       className={clsx(
-        "h-screen w-screen bg-white absolute transition-all duration-300 uppercase text-6xl font-extrabold",
+        "h-screen w-screen bg-stone-100 absolute transition-all duration-500 uppercase text-6xl font-extrabold",
         { "opacity-0 invisible": hidden }
       )}
     >
@@ -36,23 +36,19 @@ export const SplashScreen = () => {
             y2="0"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="hsl(180, 70%, 45%)" offset="0%" />
-            <stop stopColor="hsl(41, 98%, 58%)" offset="100%" />
-          </linearGradient>
-          <linearGradient
-            id="darkerTextGradient"
-            x1="0"
-            x2="100%"
-            y1="0"
-            y2="0"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="hsl(180, 70%, 35%)" offset="0%" />
-            <stop stopColor="hsl(41, 98%, 48%)" offset="100%" />
+            <stop stopColor="hsl(143, 94%, 19%)" offset="0%" />
+            <stop stopColor="hsl(143, 83%, 44%)" offset="100%" />
           </linearGradient>
         </defs>
-        <SplashText text="Mateusz" />
-        <SplashText text="Piguła" y={100} />
+        <SplashText
+          text="Mateusz"
+          order={["u", "t", "z", "a", "s", "e", "M"]}
+        />
+        <SplashText
+          text="Piguła"
+          order={["u", "P", "ł", "i", "a", "g"]}
+          y={100}
+        />
       </svg>
     </div>
   );
