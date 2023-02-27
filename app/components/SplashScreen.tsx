@@ -2,7 +2,8 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { SplashText } from "./SplashText";
 
-export const INTRO_DURATION = 4; //in seconds
+// export const INTRO_DURATION = 4; //in seconds
+export const INTRO_DURATION = 0; //in seconds
 
 export const SplashScreen = () => {
   const [hidden, setHidden] = useState(false);

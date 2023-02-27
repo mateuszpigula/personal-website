@@ -1,9 +1,11 @@
+import { Hero } from "~/components/Hero";
 import { SplashScreen } from "~/components/SplashScreen";
 
 export default function Index() {
   return (
     <main className="container mx-auto text-center max-w-3xl font-sans px-4 min-h-screen flex flex-col justify-center items-center">
       <SplashScreen />
+      <Hero />
       <img
         src="/logo.svg"
         alt="mateuszpigula text inside transparent rectangle with black stroke"
