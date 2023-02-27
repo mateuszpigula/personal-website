@@ -35,7 +35,7 @@ export const SplashText = ({ text, y = 50, order }: Props) => {
           {
             fill: "inherit",
             delay: 1 + letterIndexInOrder * 0.2,
-            duration: 2,
+            duration: 2.5,
           },
           "prefill+=1"
         );
