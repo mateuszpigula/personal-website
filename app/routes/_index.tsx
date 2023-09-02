@@ -2,7 +2,7 @@ import { SplashScreen } from "~/components/SplashScreen";
 
 export default function Index() {
   return (
-    <main className="container relative mx-auto text-center max-w-3xl font-sans px-4 min-h-screen flex flex-col justify-center items-center">
+    <>
       <SplashScreen />
       <img
         src="/logo.svg"
@@ -55,6 +55,6 @@ export default function Index() {
           contact@mateuszpigula.dev
         </a>
       </p>
-    </main>
+    </>
   );
 }

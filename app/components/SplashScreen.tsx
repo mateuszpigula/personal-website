@@ -17,7 +17,7 @@ export const SplashScreen = () => {
     <div
       id="splash-screen"
       className={clsx(
-        "h-screen w-screen bg-stone-100 absolute transition-all duration-500 uppercase text-6xl font-extrabold",
+        "h-screen w-screen bg-stone-100 absolute top-0 transition-all duration-500 uppercase text-6xl font-extrabold",
         { "opacity-0 invisible": hidden }
       )}
     >

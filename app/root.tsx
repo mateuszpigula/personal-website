@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 import stylesheet from "~/tailwind.css";
 import icons from "~/fonts/remixicon.css";
+import Navbar from "./components/Navbar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -28,8 +29,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-stone-100">
-        <Outlet />
+      <body className="bg-stone-100 mt-32">
+        <Navbar />
+        <main className="container mx-auto text-center max-w-3xl font-sans px-4 min-h-screen flex flex-col items-center">
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
