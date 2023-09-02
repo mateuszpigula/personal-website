@@ -10,6 +10,9 @@ module.exports = {
   // assetsBuildDirectory: "public/build",
   // publicPath: "/build/",
   future: {
-    unstable_tailwind: true,
+    v2_routeConvention: true,
   },
+  tailwind: true,
+  postcss: true,
+
 };
