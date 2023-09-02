@@ -1,33 +1,24 @@
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { BlogCard } from "~/components/BlogCard";
+import { getPosts } from "~/models/post.server";
 
 export const loader = async () => {
-  return json({
-    posts: [
-      {
-        slug: "my-first-post",
-        title: "My First Post",
-        description: "This is my first post",
-      },
-      {
-        slug: "90s-mixtape",
-        title: "A Mixtape I Made Just For You",
-        description: "This is my second post",
-      },
-    ],
-  });
+  return json({ posts: await getPosts() });
 };
 
 export default function Blog() {
   const { posts } = useLoaderData<typeof loader>();
+
+  if (!posts?.length) return <div>No posts yet</div>;
+
   return (
     <main>
       <ul className="grid gap-10 grid-cols-2">
         {posts.map((post) => (
-          <li key={post.slug}>
-            <Link to={post.slug}>
-              <BlogCard title={post.title} description={post.description} />
+          <li key={post.id}>
+            <Link to={`${post.id}`}>
+              <BlogCard title={post.title} description={post.desc} />
             </Link>
           </li>
         ))}

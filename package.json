@@ -5,7 +5,8 @@
     "build": "remix build",
     "dev": "remix dev",
     "start": "cross-env NODE_ENV=production netlify dev",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "generate:schema": "supabase gen types typescript --project-id cjrhuudctuwrxqqkbbkp > database.types.ts"
   },
   "dependencies": {
     "@netlify/functions": "1.6.0",
@@ -16,14 +17,17 @@
     "clsx": "^2.0.0",
     "cross-env": "7.0.3",
     "gsap": "3.12.2",
+    "marked": "^7.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "supabase": "^1.88.0",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@remix-run/dev": "1.19.3",
     "@remix-run/eslint-config": "1.19.3",
     "@remix-run/serve": "1.19.3",
+    "@types/marked": "^5.0.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
