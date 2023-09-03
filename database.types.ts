@@ -15,6 +15,8 @@ export interface Database {
           created_at: string
           desc: string
           id: number
+          is_published: boolean
+          slug: string
           title: string
         }
         Insert: {
@@ -22,6 +24,8 @@ export interface Database {
           created_at?: string
           desc: string
           id?: number
+          is_published?: boolean
+          slug: string
           title: string
         }
         Update: {
@@ -29,6 +33,8 @@ export interface Database {
           created_at?: string
           desc?: string
           id?: number
+          is_published?: boolean
+          slug?: string
           title?: string
         }
         Relationships: []

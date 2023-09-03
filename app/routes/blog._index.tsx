@@ -17,7 +17,7 @@ export default function Blog() {
       <ul className="grid gap-10 grid-cols-2">
         {posts.map((post) => (
           <li key={post.id}>
-            <Link to={`${post.id}`}>
+            <Link to={`${post.slug}`}>
               <BlogCard title={post.title} description={post.desc} />
             </Link>
           </li>

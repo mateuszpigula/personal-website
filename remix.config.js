@@ -11,8 +11,8 @@ module.exports = {
   // publicPath: "/build/",
   future: {
     v2_routeConvention: true,
+    v2_errorBoundary: true,
   },
   tailwind: true,
   postcss: true,
-
 };

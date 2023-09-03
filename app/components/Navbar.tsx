@@ -1,8 +1,19 @@
+import { useScrollPosition } from "~/hooks/useScrollPosition";
 import { ButtonLink } from "./Button/ButtonLink";
+import { clsxm } from "~/utils/clsxm";
 
 export default function Navbar() {
+  const scrollPosition = useScrollPosition();
+
   return (
-    <header className="fixed w-full top-0 bg-white border-b py-8 px-4">
+    <header
+      className={clsxm(
+        "fixed w-full top-0 bg-white border-b py-8 px-4 transition-all",
+        {
+          "py-0": scrollPosition > 0,
+        }
+      )}
+    >
       <nav className="flex justify-between w-full">
         <ButtonLink href="/">
           <img

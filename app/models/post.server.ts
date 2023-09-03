@@ -13,3 +13,16 @@ export async function getPosts(): Promise<Array<Post>> {
 
   return data || [];
 }
+
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  const { data, error } = await supabase
+    .from("Posts")
+    .select("*")
+    .eq("slug", slug)
+    .eq("is_published", true)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+
+  return data;
+}

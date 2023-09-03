@@ -1,8 +1,9 @@
+import { ContactIcons } from "~/components/ContactIcons";
 import { SplashScreen } from "~/components/SplashScreen";
 
 export default function Index() {
   return (
-    <>
+    <div className="text-center contents">
       <SplashScreen />
       <img
         src="/logo.svg"
@@ -14,29 +15,8 @@ export default function Index() {
       <p className="text-stone-500">
         🤍 Super passionate about exploring frontend in depth
       </p>
-      <ul className="text-2xl flex gap-3 justify-center mt-8 mb-4">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/mateuszpigula"
-        >
-          <i className="ri-linkedin-box-fill hover:text-green-500 transition-all"></i>
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/mateuszpigula"
-        >
-          <i className="ri-github-fill hover:text-green-500 transition-all"></i>
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://twitter.com/mateusz_pigula"
-        >
-          <i className="ri-twitter-fill hover:text-green-500 transition-all"></i>
-        </a>
-      </ul>
+
+      <ContactIcons className="mt-8 mb-4" />
 
       <ul className="leading-8 my-8">
         <li> ✅ Experienced Javascript developer</li>
@@ -55,6 +35,6 @@ export default function Index() {
           contact@mateuszpigula.dev
         </a>
       </p>
-    </>
+    </div>
   );
 }

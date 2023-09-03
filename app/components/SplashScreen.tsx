@@ -5,11 +5,13 @@ import { SplashText } from "./SplashText";
 export const INTRO_DURATION = 4; //in seconds
 
 export const SplashScreen = () => {
-  const [hidden, setHidden] = useState(true);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    if (window.sessionStorage.getItem("intro") === "false") return;
-    setHidden(false);
+    if (window.sessionStorage.getItem("intro") === "false") {
+      setHidden(true);
+      return;
+    }
 
     setTimeout(() => {
       window.sessionStorage.setItem("intro", "false");
