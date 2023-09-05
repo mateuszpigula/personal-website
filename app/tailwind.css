@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  #blog-content pre {
-    @apply p-4 bg-zinc-200 text-zinc-800;
+  #blog-content {
+    @apply break-words hyphens-auto;
+    word-break: break-word;
   }
+
+  #blog-content pre {
+    @apply p-4 bg-zinc-200 text-zinc-800 overflow-auto;
+  }
+
   #blog-content p > code {
     @apply bg-zinc-200 text-zinc-800;
   }
@@ -19,6 +25,6 @@
   }
 
   #blog-content img {
-    @apply mb-4;
+    @apply mb-4 mx-auto;
   }
 }
