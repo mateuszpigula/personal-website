@@ -25,13 +25,14 @@ export default function BlogPost() {
   if (!post) return <div>Not found</div>;
 
   return (
-    <article>
-      <h1 className="text-2xl text-green-500 mb-8 font-semibold">
+    <article className="pb-40">
+      <h1 className="text-2xl text-green-500 my-4 font-semibold">
         {post.title}
       </h1>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
         className="flex flex-col gap-4 [&_img]:mx-auto"
+        id="blog-content"
       />
     </article>
   );

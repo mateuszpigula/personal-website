@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  #blog-content pre {
+    @apply p-4 bg-zinc-200 text-zinc-800;
+  }
+  #blog-content p > code {
+    @apply bg-zinc-200 text-zinc-800;
+  }
+
+  #blog-content h2 {
+    @apply text-xl text-green-500 mt-8 font-semibold;
+  }
+
+  #blog-content a {
+    @apply text-green-500 italic;
+  }
+
+  #blog-content img {
+    @apply mb-4;
+  }
+}
