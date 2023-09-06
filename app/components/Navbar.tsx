@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <header
       className={clsxm(
-        "fixed w-full top-0 bg-white border-b py-8 px-4 transition-all z-50",
+        "fixed w-full top-0 bg-white border-b py-8 px-4 transition-all z-40",
         {
           "py-0": scrollPosition > 0,
         }

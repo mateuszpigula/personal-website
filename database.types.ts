@@ -16,6 +16,7 @@ export interface Database {
           desc: string
           id: number
           is_published: boolean
+          likes: number | null
           slug: string
           title: string
         }
@@ -25,6 +26,7 @@ export interface Database {
           desc: string
           id?: number
           is_published?: boolean
+          likes?: number | null
           slug: string
           title: string
         }
@@ -34,6 +36,7 @@ export interface Database {
           desc?: string
           id?: number
           is_published?: boolean
+          likes?: number | null
           slug?: string
           title?: string
         }
