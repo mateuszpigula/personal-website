@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  #blog-content {
-    @apply break-words hyphens-auto;
-    word-break: break-word;
-  }
-
   #blog-content pre {
     @apply p-4 bg-zinc-200 text-zinc-800 overflow-auto;
   }
@@ -21,7 +16,8 @@
   }
 
   #blog-content a {
-    @apply text-green-500 italic;
+    @apply text-green-500 italic break-words hyphens-auto;
+    word-break: break-word;
   }
 
   #blog-content img {
