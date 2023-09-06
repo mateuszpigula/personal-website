@@ -1,7 +1,7 @@
 import type { ActionArgs, LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, useSubmit } from "@remix-run/react";
-import { marked } from "marked";
+import { marked } from "~/modules/marked";
 import { useLocalStorage } from "~/hooks/useLocalStorage";
 import { getPostBySlug, likePostBySlug } from "~/models/post.server";
 import { clsxm } from "~/utils/clsxm";
