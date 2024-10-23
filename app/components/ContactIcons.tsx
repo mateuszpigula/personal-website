@@ -22,13 +22,6 @@ export const ContactIcons = ({ className }: Props) => {
       >
         <i className="ri-github-fill hover:text-green-500 transition-all" />
       </a>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://twitter.com/mateusz_pigula"
-      >
-        <i className="ri-twitter-fill hover:text-green-500 transition-all" />
-      </a>
     </ul>
   );
 };
