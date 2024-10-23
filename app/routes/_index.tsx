@@ -19,10 +19,9 @@ export default function Index() {
       <ContactIcons className="mt-8 mb-4" />
 
       <ul className="leading-8 my-8">
-        <li> ✅ Experienced Javascript developer</li>
+        <li>✅ Experienced Javascript developer</li>
         <li>✅ Team Leader</li>
         <li>✅ Technical interviewer</li>
-        <li>✅ Chapter Lead</li>
       </ul>
 
       <p>

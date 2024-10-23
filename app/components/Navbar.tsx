@@ -10,6 +10,7 @@ export default function Navbar() {
       className={clsxm(
         "fixed w-full top-0 bg-white border-b py-8 px-4 transition-all z-40",
         {
+          hidden: true,
           "py-0": scrollPosition > 0,
         }
       )}
